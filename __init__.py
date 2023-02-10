@@ -15,11 +15,15 @@ bl_info = {
 
 if "bpy" in locals():
     import imp
+    #項目に応じて追記--pyファイル名--------------------------------
     imp.reload(gt_bone_merge)
     imp.reload(gt_weightnormalize)
+    imp.reload(gt_addbone)
 else:
+    #項目に応じて追記--pyファイル名---------------------------------
     from . import gt_bone_merge
     from . import gt_weightnormalize
+    from . import gt_addbone
 
 import bpy
 
@@ -33,15 +37,19 @@ class GT_Panel(bpy.types.Panel):
 
     def draw(self, context):
         layout = self.layout
+        #項目に応じて追記--pyファイル名---------------------------------
         layout.operator("gt_tool.gt_bone_merge")
         layout.operator("gt_tool.gt_weightnormalize")
+        layout.operator("gt_tool.gt_addbone")
 
 
 # Blenderに登録するクラス
+#項目に応じて追記--pyファイル名,関数名---------------------------------
 classes = [
     GT_Panel,
     gt_bone_merge.GT_BoneMerge,
     gt_weightnormalize.GT_Weightnormalize,
+    gt_addbone.GT_AddBone,
 ]
 
 
