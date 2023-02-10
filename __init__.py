@@ -1,7 +1,7 @@
 bl_info = {
     "name": "GT Tool",
     "author": "raikohGT",
-    "version": (1, 0),
+    "version": (1, 1),
     "blender": (2, 90, 0),
     "location": "location",
     "description": "GT Toolです。自分用の便利ツールまとめです。",
