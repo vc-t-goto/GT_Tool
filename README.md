@@ -3,6 +3,7 @@ Blenderの自分用便利アドオンまとめ My Blender very very nice addon
 GT_tool
 
 v1.0.0  2022/12/04
+v1.1.0  2023/02/10 GT_AddBone追加
 
 
 
