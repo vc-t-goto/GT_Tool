@@ -1,7 +1,7 @@
 bl_info = {
     "name": "GT Tool",
     "author": "raikohGT",
-    "version": (1, 1),
+    "version": (1, 2),
     "blender": (2, 90, 0),
     "location": "location",
     "description": "GT Toolです。自分用の便利ツールまとめです。",
@@ -19,11 +19,13 @@ if "bpy" in locals():
     imp.reload(gt_bone_merge)
     imp.reload(gt_weightnormalize)
     imp.reload(gt_addbone)
+    imp.reload(gt_delvertexgroup)
 else:
     #項目に応じて追記--pyファイル名---------------------------------
     from . import gt_bone_merge
     from . import gt_weightnormalize
     from . import gt_addbone
+    from . import gt_delvertexgroup
 
 import bpy
 
@@ -41,6 +43,7 @@ class GT_Panel(bpy.types.Panel):
         layout.operator("gt_tool.gt_bone_merge")
         layout.operator("gt_tool.gt_weightnormalize")
         layout.operator("gt_tool.gt_addbone")
+        layout.operator("gt_tool.gt_delvertexgroup")
 
 
 # Blenderに登録するクラス
@@ -50,6 +53,7 @@ classes = [
     gt_bone_merge.GT_BoneMerge,
     gt_weightnormalize.GT_Weightnormalize,
     gt_addbone.GT_AddBone,
+    gt_delvertexgroup.GT_DelVertexGroup,
 ]
 
 
