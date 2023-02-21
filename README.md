@@ -4,7 +4,7 @@ GT_tool
 
 v1.0.0  2022/12/04
 v1.1.0  2023/02/10 GT_AddBone追加
-v1.2.0  2023/02/10 GT_DelVertexGroup追加
+v1.2.0  2023/02/21 GT_DelVertexGroup追加
 
 
 
